@@ -5,7 +5,7 @@ def read_data(filename):
     with open(filename, newline='') as csvfile:
         bookreader = csv.reader(csvfile, delimiter=';', quotechar='"')
         for row in bookreader:
-            data.append([row[0], row[1], row[2], row[3], row[4]])
+            data.append([row[0], row[1], row[2]])
     return data
 
 
@@ -14,4 +14,4 @@ def write_data(filename, data):
         bookwriter = csv.writer(csvfile, delimiter=';',
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for line in data:
-            bookwriter.writerow([line[0], line[1], line[2], line[3], line[4]])
+            bookwriter.writerow([line[0], line[1], line[2]])
