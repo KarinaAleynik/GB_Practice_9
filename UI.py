@@ -7,9 +7,9 @@ def menu(data):
         if answer == 0:
             display.display_data(data)
         elif answer == 1:
-            str_data = input("Please enter your data delimited by tabs: ")
-            row = str_data.split("\t")
-            data.append([row[0], row[1], row[2], row[3], row[4]])
+            str_data = input("Please enter your data delimited by ; : ")
+            row = str_data.split(";")
+            data.append([row[0], row[1], row[2]])
         elif answer == 2:
             str_to_del = input("Please enter ID: ")
             for i in range(len(data)):
